@@ -1,7 +1,7 @@
 module.exports = [{
   title: 'Hello',
-  img: './resources/start.jpeg',
-  //attribution: 
+  img: './resources/start.jpg',
+  attribution: 'https://www.flickr.com/photos/stevendepolo/5749192621/in/photostream/',
   bullets: [
     'Naomi Rosenberg, freelance software developer, recently joined Sky Bet',
     'This is a simple React app; I\'ll be taking you throught how it was done',
@@ -26,26 +26,30 @@ module.exports = [{
   ]
 },{
   title: 'Advantages for the User',
-  img: './resources/mallard.jpeg',
+  img: './resources/mallard.jpg',
   bullets: [
-    'Speed',
+    'Speed. Because ...',
     'The virtual DOM',
-    'The Mallard is my favourite train, don\'t you just love it??'
+    'Server-side rendering'
   ]
 },{
   title: 'OK show me the code already',
   img: './resources/screenshot.png',
-  attribution: 'http://amethyst-fang.deviantart.com/art/Amethyst-Fang-s-Cutie-Mark-278732272',
   bullets: [
-    'Speed',
-    'The virtual DOM'
+    'I can show you this easily because we use hot-reloding',
+    'Not much to see here',
+    'Composability, live!!',
+    ''
   ]
 },{
-  title: 'Haven\'t you heard of Separation of control?',
-  img: './resources/chaos.jpeg',
+  title: 'Haven\'t you heard of Separation of concerns?',
+  img: './resources/chaos.jpg',
+  attribution: 'http://amethyst-fang.deviantart.com/art/Amethyst-Fang-s-Cutie-Mark-278732272',
   bullets: [
-    '',
-    'The virtual DOM',
+    'Going back on yourself is fine if you went the wrong way to start with',
+    'Separation of concerns doesn\'t mean putting them in different files (Dave)',
+    'JS always linked to HTML - better transparently so',
+    'React IS the view layer'
   ]
 },{
   title: 'Q&A',

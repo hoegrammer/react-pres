@@ -34,7 +34,10 @@ var Slide = React.createClass({
     return (
       <div>
         <h1>{this.props.title}</h1>
-        <img style={{float: 'left'}} src={this.props.img} width={'400px'} />
+        <figure style={{float: 'left'}}>
+          <img src={this.props.img} width={'400px'} />
+          <figcaption><a href={this.props.attribution}>Image Source</a></figcaption>
+        </figure>
         <Bullets bullets={this.props.bullets} />
       </div>
     );
@@ -57,7 +60,7 @@ var Bullets = React.createClass({
   },
   render() {
     return (
-      <ul style={{float: 'left', width: '400px'}}>
+      <ul style={{float: 'left', width: ''}}>
         {this.props.bullets.slice(0, this.state.numBullets).map(
           (bullet, i) => (<li key={i}>{bullet}</li>)
         )}
