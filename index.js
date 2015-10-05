@@ -1,3 +1,5 @@
+require("./style.css");
+
 var React = require('react');
 var slides = require('./slides');
 var Header = require('./header');

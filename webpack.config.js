@@ -8,7 +8,15 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ }
+            { 
+                test: /\.js$/,
+                loader: "babel-loader",
+                exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                loader: "style!css"
+            }
         ]
     },
     resolveLoader: {
