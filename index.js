@@ -36,7 +36,9 @@ var Slide = React.createClass({
         <h1>{this.props.title}</h1>
         <figure style={{float: 'left'}}>
           <img src={this.props.img} width={'400px'} />
-          <figcaption><a href={this.props.attribution}>Image Source</a></figcaption>
+          {this.props.attribution &&
+            <figcaption><a href={this.props.attribution}>Image Source</a></figcaption>
+          }
         </figure>
         <Bullets bullets={this.props.bullets} />
       </div>

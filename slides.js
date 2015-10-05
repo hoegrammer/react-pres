@@ -47,7 +47,7 @@ module.exports = [{
   attribution: 'http://amethyst-fang.deviantart.com/art/Amethyst-Fang-s-Cutie-Mark-278732272',
   bullets: [
     'Going back on yourself is fine if you went the wrong way to start with',
-    'Separation of concerns doesn\'t mean putting them in different files (Dave)',
+    'Separation of concerns doesn\'t mean putting them in different files (Dave Baker)',
     'JS always linked to HTML - better transparently so',
     'React IS the view layer'
   ]
