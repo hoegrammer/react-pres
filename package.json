@@ -1,0 +1,16 @@
+{
+  "name": "react-pres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "naomi",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "react": "^0.13.3",
+    "webpack": "^1.12.2"
+  }
+}
