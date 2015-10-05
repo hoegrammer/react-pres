@@ -57,7 +57,7 @@ var Bullets = React.createClass({
   },
   render() {
     return (
-      <ul style={{float: 'left'}}>
+      <ul style={{float: 'left', width: '400px'}}>
         {this.props.bullets.slice(0, this.state.numBullets).map(
           (bullet, i) => (<li key={i}>{bullet}</li>)
         )}
