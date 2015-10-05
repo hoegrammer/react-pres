@@ -1,4 +1,13 @@
 module.exports = [{
+  title: 'Hello',
+  img: './resources/electric-works-1.jpg',
+  bullets: [
+    'Naomi Rosenberg, freelance software developer, recently joined Sky Bet',
+    'This is a simple React app; I\'ll be taking you throught how it was done',
+    'Grab the source from https://github.com/hoegrammer/react-pres',
+    'Thanks to Jon Robertson for making it look awesome'
+  ]
+},{
   title: 'What is React?',
   img: './resources/react.png',
   bullets: [
