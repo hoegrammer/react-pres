@@ -62,7 +62,7 @@ var Bullets = React.createClass({
   },
   render() {
     return (
-      <ul style={{float: 'left', width: ''}}>
+      <ul style={{float: 'left'}}>
         {this.props.bullets.slice(0, this.state.numBullets).map(
           (bullet, i) => (<li key={i}>{bullet}</li>)
         )}
@@ -71,6 +71,9 @@ var Bullets = React.createClass({
   },
   componentDidMount() {
     window.addEventListener("keydown", this.addBullet);
+  },
+  componentWillReceiveProps() {
+    this.setState({numBullets: 0});
   },
   addBullet(e) {
     if (e.which == 40) {

@@ -39,7 +39,7 @@ module.exports = [{
     'I can show you this easily because we use hot-reloding',
     'Not much to see here',
     'Composability, live!!',
-    ''
+    'The infrastructure - node.js, webpack, babel'
   ]
 },{
   title: 'Haven\'t you heard of Separation of concerns?',
