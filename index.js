@@ -1,5 +1,7 @@
 var React = require('react');
 var slides = require('./slides');
+var Header = require('./header');
+var Footer = require('./footer');
 
 var Presentation = React.createClass({
   getInitialState() {
@@ -8,7 +10,9 @@ var Presentation = React.createClass({
   render() {
     return (
       <div>
-        <Slide {...slides[this.state.slideNum]} />
+        <Header />
+        <Slide style={{margin: 'auto'}} {...slides[this.state.slideNum]} />
+        <Footer />
       </div>
     );
   },
@@ -29,8 +33,8 @@ var Slide = React.createClass({
   render() {
     return (
       <div>
-        <h1>{this.props.title}</h1>
-        <img style={{float: 'left'}} src={this.props.img} width={'200px'} />
+        <h2>{this.props.title}</h2>
+        <img style={{float: 'left'}} src={this.props.img} width={'400px'} />
         <Bullets bullets={this.props.bullets} />
       </div>
     );
