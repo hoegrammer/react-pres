@@ -11,7 +11,7 @@ var Presentation = React.createClass({
     return (
       <div>
         <Header />
-        <Slide style={{margin: 'auto'}} {...slides[this.state.slideNum]} />
+        <Slide {...slides[this.state.slideNum]} />
         <Footer />
       </div>
     );
@@ -33,7 +33,7 @@ var Slide = React.createClass({
   render() {
     return (
       <div>
-        <h2>{this.props.title}</h2>
+        <h1>{this.props.title}</h1>
         <img style={{float: 'left'}} src={this.props.img} width={'400px'} />
         <Bullets bullets={this.props.bullets} />
       </div>
