@@ -1,4 +1,5 @@
 module.exports = [{
+  slideNum: 0,
   title: 'Hello',
   img: './resources/start.jpg',
   attribution: 'https://www.flickr.com/photos/stevendepolo/5749192621/in/photostream/',
@@ -9,6 +10,7 @@ module.exports = [{
     'Thanks to Jon Robertson for making it look awesome'
   ]
 },{
+  slideNum: 1,
   title: 'What is React?',
   img: './resources/react.png',
   bullets: [
@@ -17,14 +19,7 @@ module.exports = [{
     'A view layer - but this means so much more than it used to'
   ]
 },{
-  title: 'Advantages for the Developer',
-  img: './resources/lego.jpeg',
-  bullets: [
-    'Composability',
-    'Simplicity',
-    'Transparency'
-  ]
-},{
+  slideNum: 2,
   title: 'Advantages for the User',
   img: './resources/mallard.jpg',
   bullets: [
@@ -33,16 +28,26 @@ module.exports = [{
     'Server-side rendering'
   ]
 },{
+  slideNum: 3,  title: 'Advantages for the Developer',
+  img: './resources/lego.jpeg',
+  bullets: [
+    'Composability',
+    'Simplicity',
+    'Transparency'
+  ]
+},{
+  slideNum: 4,
   title: 'OK show me the code already',
   img: './resources/screenshot.png',
   bullets: [
-    'I can show you this easily because we use hot-reloding',
+    'I can show you this easily because we use hot-exploding',
     'Not much to see here',
     'Composability, live - and a bit of functional programming',
     'Lifecycle hooks, e.g. componentWillReceiveProps',
     'The infrastructure - node.js, webpack, babel'
   ]
 },{
+  slideNum: 5,
   title: 'Haven\'t you heard of Separation of concerns?',
   img: './resources/chaos.jpg',
   attribution: 'http://amethyst-fang.deviantart.com/art/Amethyst-Fang-s-Cutie-Mark-278732272',
@@ -50,9 +55,11 @@ module.exports = [{
     'Going back on yourself is fine if you went the wrong way to start with',
     'Separation of concerns doesn\'t mean putting them in different files (Dave Baker)',
     'JS always linked to HTML - better transparently so',
-    'React IS the view layer'
+    'For big apps, flux architecture separates out data',
+    'We use Immutable.js to keep track of it'
   ]
 },{
+  slideNum: 6,
   title: 'Q&A',
   img: './resources/electric-works.jpeg',
   bullets: [

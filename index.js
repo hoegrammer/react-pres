@@ -40,7 +40,7 @@ var Slide = React.createClass({
             <figcaption><a href={this.props.attribution}>Image Source</a></figcaption>
           }
         </figure>
-        <Bullets bullets={this.props.bullets} />
+        <Bullets slideNum={this.props.slideNum} bullets={this.props.bullets} />
       </div>
     );
   }
@@ -49,7 +49,7 @@ var Slide = React.createClass({
 var SimpleBullets = React.createClass({
   render() {
     return (
-      <ul style={{float: 'left'}}>
+      <ul style={{float: 'left', width: '400px'}}>
         {this.props.bullets.map((bullet, i) => (<li key={i}>{bullet.toUpperCase()}</li>))}
       </ul>
     );
@@ -62,7 +62,7 @@ var Bullets = React.createClass({
   },
   render() {
     return (
-      <ul style={{float: 'left'}}>
+      <ul style={{float: 'left', width: '400px'}}>
         {this.props.bullets.slice(0, this.state.numBullets).map(
           (bullet, i) => (<li key={i}>{bullet}</li>)
         )}
@@ -72,8 +72,10 @@ var Bullets = React.createClass({
   componentDidMount() {
     window.addEventListener("keydown", this.addBullet);
   },
-  componentWillReceiveProps() {
-    this.setState({numBullets: 0});
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.slideNum !== this.props.slideNum) {
+      this.setState({numBullets: 0});
+    }
   },
   addBullet(e) {
     if (e.which == 40) {
