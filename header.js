@@ -5,7 +5,7 @@ var Header = React.createClass({
     return (
       <div>
         <img src={'./resources/skybet.jpg'} height={'100px'} />
-        <h1 style={{display: 'inline'}}>Tech talk</h1>
+        <h1 style={{display: 'inline'}}>Forefront of front end: react.js</h1>
       </div>
     );
   }
