@@ -50,7 +50,7 @@ var SimpleBullets = React.createClass({
   render() {
     return (
       <ul style={{float: 'left'}}>
-        {this.props.bullets.map((bullet, i) => (<li key={i}>{bullet}</li>))}
+        {this.props.bullets.map((bullet, i) => (<li key={i}>{bullet.toUpperCase()}</li>))}
       </ul>
     );
   }

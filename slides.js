@@ -38,7 +38,7 @@ module.exports = [{
   bullets: [
     'I can show you this easily because we use hot-reloding',
     'Not much to see here',
-    'Composability, live',
+    'Composability, live - and a bit of functional programming',
     'Lifecycle hooks, e.g. componentWillReceiveProps',
     'The infrastructure - node.js, webpack, babel'
   ]
