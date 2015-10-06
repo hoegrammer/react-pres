@@ -5,7 +5,7 @@ module.exports = [{
   attribution: 'https://www.flickr.com/photos/stevendepolo/5749192621/in/photostream/',
   bullets: [
     'Naomi Rosenberg, freelance software developer, recently joined Sky Bet',
-    'This is a simple React app; I\'ll be taking you throught how it was done',
+    'This is a simple React app; I\'ll be taking you through how it was done',
     'Grab the source from https://github.com/hoegrammer/react-pres',
     'Thanks to Jon Robertson for making it look awesome'
   ]
@@ -14,9 +14,9 @@ module.exports = [{
   title: 'What is React?',
   img: './resources/react.png',
   bullets: [
-    'A web UI library',
-    'Not a full framework, doesn\'t have models like Backbone, for example',
-    'A view layer - but this means so much more than it used to'
+    'A component-based web UI library',
+    '"Just" a view layer',
+    'Doesn\'t have models like Backbone, for example'
   ]
 },{
   slideNum: 2,
@@ -37,18 +37,17 @@ module.exports = [{
   ]
 },{
   slideNum: 4,
-  title: 'OK show me the code already',
+  title: 'Talk is cheap, show me the code',
   img: './resources/screenshot.png',
   bullets: [
-    'I can show you this easily because we use hot-exploding',
-    'Not much to see here',
-    'Composability, live - and a bit of functional programming',
-    'Lifecycle hooks, e.g. componentWillReceiveProps',
-    'The infrastructure - node.js, webpack, babel'
+    'The infrastructure - node.js, webpack, ES6 (babel)',
+    'Example of hot-exploding',
+    'Example of composability',
+    'Example of transparency/simplicity',
   ]
 },{
   slideNum: 5,
-  title: 'Haven\'t you heard of Separation of concerns?',
+  title: 'What\s all that HTML, what about SoC?',
   img: './resources/chaos.jpg',
   attribution: 'http://amethyst-fang.deviantart.com/art/Amethyst-Fang-s-Cutie-Mark-278732272',
   bullets: [

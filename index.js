@@ -2,6 +2,7 @@ require("./style.css");
 
 var React = require('react');
 var slides = require('./slides');
+// Pulling in components from other files using node syntax
 var Header = require('./header');
 var Footer = require('./footer');
 
@@ -48,16 +49,6 @@ var Slide = React.createClass({
   }
 })
 
-var SimpleBullets = React.createClass({
-  render() {
-    return (
-      <ul style={{float: 'left', width: '400px'}}>
-        {this.props.bullets.map((bullet, i) => (<li key={i}>{bullet.toUpperCase()}</li>))}
-      </ul>
-    );
-  }
-});
-
 var Bullets = React.createClass({
   getInitialState() {
     return {numBullets: 0};
@@ -72,18 +63,33 @@ var Bullets = React.createClass({
     );
   },
   componentDidMount() {
-    window.addEventListener("keydown", this.addBullet);
+    window.addEventListener("keydown", this.showNextBullet);
   },
+  // When a new slide is loaded (slideNum changes), clear bullets.
   componentWillReceiveProps(nextProps) {
     if (nextProps.slideNum !== this.props.slideNum) {
       this.setState({numBullets: 0});
     }
   },
-  addBullet(e) {
+  showNextBullet(e) {
     if (e.which == 40) {
+      // This changes the state, causing render() to run again
       return this.setState({numBullets: this.state.numBullets + 1})
     }
   }
 });
+
+// Another component to swap out for "Bullets", to demonstrate compositionality
+// Also demonstrates using map to generate HTML
+var SimpleBullets = React.createClass({
+  render() {
+    return (
+      <ul style={{float: 'left', width: '400px'}}>
+        {this.props.bullets.map((bullet, i) => (<li key={i}>{bullet.toUpperCase()}</li>))}
+      </ul>
+    );
+  }
+});
+
 
 React.render(<Presentation {...slides} />, document.getElementById('main'))

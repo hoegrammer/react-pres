@@ -1,5 +1,5 @@
 # react-pres
-A very very simple presentation engine written in React, complete with React-related content. Uses webpack and hot-reloading so that you can edit code and see the results in the browser without refreshing the page.
+A very very simple presentation engine written in React, complete with React-related content. Uses  a babel transform to do fine-grained hot-reloading.
 
 # to install
 `npm install`

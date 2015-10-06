@@ -1,0 +1,31 @@
+WHAT IS REACT
+- "just" is in inverted commas because the view layer is such a big part of a web app.  The distinction between front and back end is blurred these days, with rendering being done on the server and logic on the client. What makes React a view layer is that it's job is to present data and respond to user input.
+- No models - it's up to you how you organise your data. Later on I'll say a bit about Flux, which provides that functionality.
+
+USER BENEFITS
+- Virtual DOM - when a component needs to be re-rendered, it isn't fully re-painted in the browser. Instead, a representation of how it will look is compared with the current state and only the changes are re-painted.
+- Server-side rendering - Not using that here, but we do use it at Sky Bet (as does Stack Overflow). A combination of server- and client-side rendering provide a snappy UX by doing the rendering on the most appropriate place in each case.
+
+
+DEVELOPER BENEFITS
+- Each component is self-sufficient and they can be combined to make bigger ones, allowing for a lot of reusability. Which also benefits the user because the UI is likely to be more uniform and logical. Bits of the UI that do the same thing will look and behave exactly the same.
+
+- Simplicity - It's a very efficient library, high-level when you want that - You can do a lot with very little code - but it allows you all the power of Javascript (and all the foot guns) when you need it. 
+
+- Transparency - Each component manages its own rendering logic so you can see at a glance how a component will look given certain data (if you can't, it probably should be more than one component). This is possible because the entire component is re-rendered in the virtual DOM when any data changes. So there is no need for other parts of the app to interfere with the rendering logic. The only thing that changes at runtime is data.
+
+SHOW ME THE CODE
+- Infrastructure - We build everything with node.js, e.g. using the npm React module (show package.json). This means we use the same syntax, code style and concepts on the server and the client (show requiring module from other file). If this code looks weird, it's because it's ES6. ES6 is very efficient to write and you'll be pleased to know it solves a lot of the problems relating to the keyword "this" (show this.props.bullets.slice). It isn't supported in most browsers but we use babel to pre-process it. To compile node code into something that can run in a browser, we use webpack. Both are avaiable as npm modules.
+
+- Oops that should say hot-reloading (change it). Webpack does its own hot reloading, but it replaces the whole app each time, which with an SPA like this means it goes back to the beginning. By using a react-transform plugin to babel (show .babelrc), we can swap out individual components in situ.
+
+- Here you can see how the Presentation component is built from header, footer and slide, and the slide has its own subcomponent, Bullets. The Bullets component handles the logic of showing the next bullet when you press the down arrow. If this functionality was required in a component that wasn't a slide, it could easily be reused. To show how easily components can be swapped out I've made another one, SimpleBullets, that shows them all at once in capital letters (swap, click back through slides and swap back).
+
+- Transparency/Simplicity - The SimpleBullets component receives data, a set of bullet points, from the calling code. All the logic for rendering them is contained within the component. So you don't need to know anything about the rest of the app to see how the data will be represented. This is not a new thing for web frameworks. But in Backbone for example that would be expensive for large, intricate or nested components because it would have to render everything in the browser when anything changed. So it is common to see view logic being manipulated from outside, or complex internal logic, in order to save cycles. Because React uses the virtual DOM, you can write in a data-driven way without extra cost. Sometimes you need internal state to keep track of user input (see Bullets - changes internal state when user presses arrow) but even then you can see from the render function how it will affect the display (highlight reference to state). The cheap re-rendering policy makes the render function the go-to place for understanding the component.
+
+SEPARATION OF CONCERNS
+- People get upset about mixing HTML with JS. Traditionally this is seen as bad, as going back to the 90s when people wrote monolithic web pages with SQL in them. But as my colleague Dave Baker pointed out, of concerns doesn't just mean putting them in different files. One school of thought now is that view logic and HTML are tightly coupled anyway, so trying to separate them just caused a lot of angry phone calls when the designer messed with the CSS selectors that the JS hooked into. What we really need is to separate concerns where it matters, and that's between the data and the view.
+
+- The data for this presentation is here (show). Obviously for a serious app this would be kept in a database - but it would also be represented in a model-type structure in the app itself. A common approach to this for React applications is the Flux architecture, which we use at Sky Bet. This lets you keep data in stores (like models) and when you change anything in the store, all affected components re-render. This means you don't have to write code to keep components in sync; everything flows from a central place. 
+
+- The team here are inspired by the Functional Programming aspects of Javascript and very keen to make our code as clean and simple as we can. Something that helps with that is the Immutable library. It provides some data structures like maps and lists which cannot be changed once they are created. When you want different data you have to make a new object. This makes it easier to keep track of what data is being passed into what. It encourages writing pure functions which take an immutable argument and return a different one. This 
