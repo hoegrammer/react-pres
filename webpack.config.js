@@ -1,5 +1,11 @@
 var path = require('path');
 
+var sassLoaders = [
+  'style',
+  'css',
+  'autoprefixer?browsers=last 2 version'
+];
+
 module.exports = {
     entry: './index.js',
     output: {
@@ -15,7 +21,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: "style!css"
+                loader: sassLoaders.join("!")
             }
         ]
     },

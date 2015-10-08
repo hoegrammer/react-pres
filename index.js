@@ -36,25 +36,25 @@ var Slide = React.createClass({
   render() {
     return (
       <div className="slide">
-        <div className="slide__title">
-          <h1>
-            {this.props.title}
-          </h1>
-        </div>
-        <div className="slide__media">
-          <figure className="slide__media__figure">
-            <img src={this.props.img} className="slide__media__image" />
-            {this.props.attribution &&
-              <figcaption className="slide__media__caption" >
-                <a className="slide__media__source" href={this.props.attribution}>
-                  Image Source
-                </a>
-              </figcaption>
-            }
-          </figure>
-        </div>
+        <h1 className="slide__title">
+          {this.props.title}
+        </h1>
         <div className="slide__content">
-          <Bullets slideNum={this.props.slideNum} bullets={this.props.bullets} />
+          <div className="slide__content__media">
+            <figure className="media">
+              <img src={this.props.img} className="media__image" />
+              {this.props.attribution &&
+                <figcaption className="media__caption" >
+                  <a className="slide__media__source" href={this.props.attribution}>
+                    Image Source
+                  </a>
+                </figcaption>
+              }
+            </figure>
+          </div>
+          <div className="slide__content__bullets">
+            <Bullets slideNum={this.props.slideNum} bullets={this.props.bullets} />
+          </div>
         </div>
       </div>
     );
