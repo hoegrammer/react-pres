@@ -85,6 +85,7 @@ var Bullets = React.createClass({
   },
   showNextBullet(e) {
     if (e.which == 40) {
+      e.preventDefault();
       // This changes the state, causing render() to run again
       return this.setState({numBullets: this.state.numBullets + 1})
     }

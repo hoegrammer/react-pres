@@ -2,7 +2,7 @@ module.exports = [{
   slideNum: 0,
   title: 'Hello',
   img: './resources/start.jpg',
-  attribution: 'https://www.flickr.com/photos/stevendepolo/5749192621/in/photostream/',
+  attribution: 'https://www.pexels.com/photo/young-game-match-kids-2923/',
   bullets: [
     'Naomi Rosenberg, freelance software developer, recently joined Sky Bet',
     'This is a simple React app; I\'ll be taking you through how it was done',
@@ -22,6 +22,7 @@ module.exports = [{
   slideNum: 2,
   title: 'Advantages for the User',
   img: './resources/mallard.jpg',
+  attribution: 'http://blog.nrm.org.uk/2013/07/01/how-mallard-inspired-a-nation/',
   bullets: [
     'Speed. Because ...',
     'The virtual DOM',
@@ -29,7 +30,7 @@ module.exports = [{
   ]
 },{
   slideNum: 3,  title: 'Advantages for the Developer',
-  img: './resources/lego.jpeg',
+  img: './resources/lego.jpg',
   bullets: [
     'Composability',
     'Simplicity',
@@ -38,7 +39,7 @@ module.exports = [{
 },{
   slideNum: 4,
   title: 'Talk is cheap, show me the code',
-  img: './resources/screenshot.png',
+  img: './resources/screenshot.jpg',
   bullets: [
     'The infrastructure - node.js, webpack, ES6 (babel)',
     'Example of hot-exploding',
@@ -60,7 +61,8 @@ module.exports = [{
 },{
   slideNum: 6,
   title: 'Q&A',
-  img: './resources/electric-works.jpeg',
+  img: './resources/electric-works.jpg',
+  attribution: 'https://flic.kr/p/7eMLcf',
   bullets: [
     'Sky Betting and Gaming are creating 100 bleeding edge IT opportunities at the Electric Works, Sheffield',
     'Java, React.JS, Clojure, Big Data, Devops, Test automation, LAMP, Architecture, Analysis, Agile',
