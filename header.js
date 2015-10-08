@@ -3,9 +3,16 @@ var React = require('react');
 var Header = React.createClass({
   render() {
     return (
-      <div>
-        <img src={'./resources/skybet.jpg'} height={'100px'} />
-        <h1 style={{display: 'inline'}}>Forefront of front end: react.js</h1>
+      <div className="header">
+        <div>
+          <img className="header__logo" src={'./resources/skybet.png'} />
+          <h1 className="header__title">
+            Forefront of front end: react.js
+          </h1>
+          <span className="header__author">
+            Naomi Rosenberg
+          </span>
+        </div>
       </div>
     );
   }

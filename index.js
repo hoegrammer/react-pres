@@ -12,7 +12,7 @@ var Presentation = React.createClass({
   },
   render() {
     return (
-      <div>
+      <div className="presentation">
         <Header />
         <Slide {...slides[this.state.slideNum]} />
         <Footer />
@@ -35,15 +35,27 @@ var Presentation = React.createClass({
 var Slide = React.createClass({
   render() {
     return (
-      <div>
-        <h1>{this.props.title}</h1>
-        <figure style={{float: 'left'}}>
-          <img src={this.props.img} width={'400px'} />
-          {this.props.attribution &&
-            <figcaption><a href={this.props.attribution}>Image Source</a></figcaption>
-          }
-        </figure>
-        <Bullets slideNum={this.props.slideNum} bullets={this.props.bullets} />
+      <div className="slide">
+        <div className="slide__title">
+          <h1>
+            {this.props.title}
+          </h1>
+        </div>
+        <div className="slide__media">
+          <figure className="slide__media__figure">
+            <img src={this.props.img} className="slide__media__image" />
+            {this.props.attribution &&
+              <figcaption className="slide__media__caption" >
+                <a className="slide__media__source" href={this.props.attribution}>
+                  Image Source
+                </a>
+              </figcaption>
+            }
+          </figure>
+        </div>
+        <div className="slide__content">
+          <Bullets slideNum={this.props.slideNum} bullets={this.props.bullets} />
+        </div>
       </div>
     );
   }
@@ -55,9 +67,9 @@ var Bullets = React.createClass({
   },
   render() {
     return (
-      <ul style={{float: 'left', width: '400px'}}>
+      <ul className="bullet-list">
         {this.props.bullets.slice(0, this.state.numBullets).map(
-          (bullet, i) => (<li key={i}>{bullet}</li>)
+          (bullet, i) => (<li className="bullet-list__item" key={i}>{bullet}</li>)
         )}
       </ul>
     );
@@ -84,7 +96,7 @@ var Bullets = React.createClass({
 var SimpleBullets = React.createClass({
   render() {
     return (
-      <ul style={{float: 'left', width: '400px'}}>
+      <ul>
         {this.props.bullets.map((bullet, i) => (<li key={i}>{bullet.toUpperCase()}</li>))}
       </ul>
     );

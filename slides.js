@@ -7,7 +7,7 @@ module.exports = [{
     'Naomi Rosenberg, freelance software developer, recently joined Sky Bet',
     'This is a simple React app; I\'ll be taking you through how it was done',
     'Grab the source from https://github.com/hoegrammer/react-pres',
-    'Thanks to Jon Robertson for making it look awesome'
+    'Thanks to John Robertson for making it look awesome'
   ]
 },{
   slideNum: 1,
