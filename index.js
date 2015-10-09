@@ -45,8 +45,8 @@ var Slide = React.createClass({
               <img src={this.props.img} className="media__image" />
               {this.props.attribution &&
                 <figcaption className="media__caption" >
-                  <a className="slide__media__source" href={this.props.attribution}>
-                    Image Source
+                  <a className="slide__media__source" href={this.props.attribution.url}>
+                    {this.props.attribution.copyright}
                   </a>
                 </figcaption>
               }
