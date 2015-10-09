@@ -29,3 +29,8 @@ SEPARATION OF CONCERNS
 - The data for this presentation is here (show). Obviously for a serious app this would be kept in a database - but it would also be represented in a model-type structure in the app itself. A common approach to this for React applications is the Flux architecture, which we use at Sky Bet. This lets you keep data in stores (like models) and when you change anything in the store, all affected components re-render. This means you don't have to write code to keep components in sync; everything flows from a central place. 
 
 - The team here are inspired by the Functional Programming aspects of Javascript and very keen to make our code as clean and simple as we can. Something that helps with that is the Immutable library. It provides some data structures like maps and lists which cannot be changed once they are created. When you want different data you have to make a new object. This makes it easier to keep track of what data is being passed into what. It encourages writing pure functions which take an immutable argument and return a different one.
+
+OPEN SOURCE SKY
+- A major benefit of using Node.js and React is the open source eco-system. And we engage with that here at Sky Bet. For example Glen has created a unit testing helper library called Skin-deep. Not sure if you can see from the slide but there are lots of pull requests from his colleagues here as we are all using the code and suggesting changes.
+- We also contribute to existing projects. I recently introduced redbox-react and react-transform-catch-errors plugins into our apps and in the process had some some minor changes accepted intto those projects.
+- We are early adopters so we often find ourselves engaging with developers, raising issues and helping test.

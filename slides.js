@@ -41,7 +41,7 @@ module.exports = [{
 },{
   slideNum: 4,
   title: 'Talk is cheap, show me the code',
-  img: './resources/screenshot.jpg',
+  img: './resources/code.jpg',
   bullets: [
     'The infrastructure - node.js, webpack, ES6 (babel)',
     'Example of hot-exploding',
@@ -49,7 +49,7 @@ module.exports = [{
     'Example of transparency/simplicity',
   ]
 },{
-  slideNum: 5,
+  slideNum: 6,
   title: 'What\s all that HTML, what about SoC?',
   img: './resources/chaos.jpg',
   attribution: {
@@ -64,7 +64,17 @@ module.exports = [{
     'We use Immutable.js to keep track of it'
   ]
 },{
-  slideNum: 6,
+  slideNum: 5,
+  title: 'Open source Sky',
+  img: './resources/github.png',
+  bullets: [
+    'We create',
+    'We contribute',
+    'We join the discussion',
+    'hoegrammer/react-pres',
+  ]
+},{
+  slideNum: 7,
   title: 'Q&A',
   img: './resources/electric-works.jpg',
   attribution: {
