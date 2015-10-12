@@ -69,7 +69,11 @@ var Bullets = React.createClass({
     return (
       <ul className="bullet-list">
         {this.props.bullets.slice(0, this.state.numBullets).map(
-          (bullet, i) => (<li className="bullet-list__item" key={i}>{bullet}</li>)
+          (bullet, i) => (
+            <li className="bullet-list__item"
+              key={i}>{bullet}
+            </li>
+          )
         )}
       </ul>
     );
@@ -97,8 +101,11 @@ var Bullets = React.createClass({
 var SimpleBullets = React.createClass({
   render() {
     return (
-      <ul>
-        {this.props.bullets.map((bullet, i) => (<li key={i}>{bullet.toUpperCase()}</li>))}
+      <ul className='bullet-list'>
+        {this.props.bullets.map((bullet, i) => (
+          <li className='bullet-list__item' key={i}>
+            {bullet.toUpperCase()}
+          </li>))}
       </ul>
     );
   }

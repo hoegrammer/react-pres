@@ -3,9 +3,9 @@ module.exports = [{
   title: 'Hello',
   img: './resources/start.jpg',
   bullets: [
-    'Naomi Rosenberg, freelance software developer, recently joined Sky Bet',
-    'This is a simple React app; I\'ll be taking you through how it was done',
-    'Grab the source from https://github.com/hoegrammer/react-pres',
+    'Naomi Rosenberg, freelance software developer, currently working with Sky Bet',
+    'This is a simple React app; I\'ll be showing you some of the code as we go along',
+    'Grab the source from github - hoegrammer/react-pres',
     'Thanks to John Robertson for making it look awesome'
   ]
 },{
@@ -19,7 +19,7 @@ module.exports = [{
   ]
 },{
   slideNum: 2,
-  title: 'Advantages for the User',
+  title: 'Advantages for the End User',
   img: './resources/mallard.jpg',
   attribution: {
     url: 'http://blog.nrm.org.uk/2013/07/01/how-mallard-inspired-a-nation/',
@@ -43,14 +43,14 @@ module.exports = [{
   title: 'Talk is cheap, show me the code',
   img: './resources/code.jpg',
   bullets: [
+    'Example of hot-reloading',
     'The infrastructure - node.js, webpack, ES6 (babel)',
-    'Example of hot-exploding',
     'Example of composability',
     'Example of transparency/simplicity',
   ]
 },{
   slideNum: 6,
-  title: 'What\s all that HTML, what about SoC?',
+  title: 'What\s all that HTML, what about Separation of Concerns?',
   img: './resources/chaos.jpg',
   attribution: {
     url: 'http://amethyst-fang.deviantart.com/art/Amethyst-Fang-s-Cutie-Mark-278732272',
@@ -65,7 +65,7 @@ module.exports = [{
   ]
 },{
   slideNum: 5,
-  title: 'Open source Sky',
+  title: 'Open Sky',
   img: './resources/github.png',
   bullets: [
     'We create',

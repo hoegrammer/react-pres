@@ -7,11 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "https://github.com/hoegrammer/react-pres",
-  "author": "Naomi Rosenberg <naomi.rosenber@skybettingandgaming.com>",
+  "author": "Naomi Rosenberg <naomi.rosenberg@skybettingandgaming.com>",
   "contributors": [
     {
-      "name": "Jon Robertson",
-      "email": "jon.robertson@skybettingandgaming.com"
+      "name": "John Robertson",
+      "email": "john.robertson@skybettingandgaming.com"
     }
   ],
   "license": "ISC",

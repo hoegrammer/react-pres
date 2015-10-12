@@ -117,6 +117,8 @@ a {
     padding: 0 2rem 2rem;
 }
 
+
+
 .slide__content__bullets {
     padding: 0 2rem 2rem;
 }
@@ -177,6 +179,11 @@ a {
 /**
  * Extra
  */
+@media (max-width: 700px) {
+    .slide__content__media {
+        display: none;
+    }
+}
 
 @media all and (min-width: 800px) {
 

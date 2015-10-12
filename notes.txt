@@ -15,7 +15,7 @@ DEVELOPER BENEFITS
 - Transparency - Each component manages its own rendering logic so you can see at a glance how a component will look given certain data (if you can't, it probably should be more than one component). This is possible because the entire component is re-rendered in the virtual DOM when any data changes. So there is no need for other parts of the app to interfere with the rendering logic. The only thing that changes at runtime is data.
 
 SHOW ME THE CODE
-- Infrastructure - We build everything with node.js, e.g. using the npm React module (show package.json). This means we use the same syntax, code style and concepts on the server and the client (show requiring module from other file). If this code looks weird, it's because it's ES6. ES6 is very efficient to write and you'll be pleased to know it solves a lot of the problems relating to the keyword "this" (show this.props.bullets.slice). It isn't supported in most browsers but we use babel to pre-process it. To compile node code into something that can run in a browser, we use webpack. Both are avaiable as npm modules.
+- Infrastructure - We build everything with node.js, e.g. using the npm React module (show package.json). This means we use the same syntax, code style and concepts on the server and the client (show requiring module from other file). If this code looks weird, it's because it's ES6. ES6 is very efficient to write and you'll be pleased to know it solves a lot of the problems relating to the keyword "this" (show this.props.bullets.slice - I don't think that would work in normal Javascript, although it might; I don't have to care). It isn't supported in most browsers but we use babel to pre-process it. To compile node code into something that can run in a browser, we use webpack. Both are avaiable as npm modules.
 
 - Oops that should say hot-reloading (change it). Webpack does its own hot reloading, but it replaces the whole app each time, which with an SPA like this means it goes back to the beginning. By using a react-transform plugin to babel (show .babelrc), we can swap out individual components in situ.
 
@@ -30,7 +30,8 @@ SEPARATION OF CONCERNS
 
 - The team here are inspired by the Functional Programming aspects of Javascript and very keen to make our code as clean and simple as we can. Something that helps with that is the Immutable library. It provides some data structures like maps and lists which cannot be changed once they are created. When you want different data you have to make a new object. This makes it easier to keep track of what data is being passed into what. It encourages writing pure functions which take an immutable argument and return a different one.
 
-OPEN SOURCE SKY
+OPEN SKY
 - A major benefit of using Node.js and React is the open source eco-system. And we engage with that here at Sky Bet. For example Glen has created a unit testing helper library called Skin-deep. Not sure if you can see from the slide but there are lots of pull requests from his colleagues here as we are all using the code and suggesting changes.
-- We also contribute to existing projects. I recently introduced redbox-react and react-transform-catch-errors plugins into our apps and in the process had some some minor changes accepted intto those projects.
+- We also contribute to existing projects. I recently introduced some error handling plugins into our apps and in the process had some some changes accepted into those projects.
 - We are early adopters so we often find ourselves engaging with developers, raising issues and helping test.
+- The code and content of this presentation are avaiable on github.
