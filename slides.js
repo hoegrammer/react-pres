@@ -56,9 +56,16 @@ module.exports = [{
   },
   bullets: [
     'Going back on yourself is fine if you went the wrong way to start with',
-    'Separation of concerns doesn\'t mean putting them in different files (Dave Baker)',
+    'Separation of concerns doesn\'t mean putting them in different files',
     'JS always linked to HTML - transparency',
     'Flux architecture separates data',
     'Can use Immutable.js, helps you keep track of it'
+  ]
+},{
+  slideNum: 7,
+  twitter: true,
+  title: 'Data fetching example',
+  bullets: [
+    'Uses an interceptor to fire async request and then write to store in callback'
   ]
 }];

@@ -22,8 +22,11 @@
     "browser-request": "^0.3.3",
     "deep-extend": "^0.4.0",
     "fluctuations": "^0.8.0",
+    "immutable": "^3.7.6",
     "react": "^0.13.3",
     "react-transform-hmr": "^1.0.1",
+    "request": "2.65.0",
+    "simple-request": "^0.1.1",
     "webpack": "^1.12.2"
   },
   "devDependencies": {

@@ -5,6 +5,7 @@ var slides = require('./slides');
 // Pulling in components from other files using node syntax
 var Header = require('./header');
 var Footer = require('./footer');
+var {dispatch}  = require('./dispatcher');
 
 var Application = React.createClass({
   getInitialState() {
@@ -14,7 +15,7 @@ var Application = React.createClass({
     return (
       <div className="presentation">
         <Header/>
-        <Slide {...slides[this.state.slideNum]} />
+        <Slide slide={slides[this.state.slideNum]} stores={this.props.stores} dispatch={this.props.dispatch} />
         <Footer />
       </div>
     );
@@ -34,26 +35,32 @@ var Application = React.createClass({
 
 var Slide = React.createClass({
   render() {
+		var slide = this.props.slide;
     return (
       <div className="slide">
         <h1 className="slide__title">
-          {this.props.title}
+          {slide.title}
         </h1>
         <div className="slide__content">
           <div className="slide__content__media">
-            <figure className="media">
-              <img src={this.props.img} className="media__image" />
-              {this.props.attribution &&
-                <figcaption className="media__caption" >
-                  <a className="slide__media__source" href={this.props.attribution.url}>
-                    {this.props.attribution.copyright}
-                  </a>
-                </figcaption>
-              }
-            </figure>
+						{!slide.twitter && 
+							<figure className="media">
+								<img src={slide.img} className="media__image" />
+								{slide.attribution &&
+									<figcaption className="media__caption" >
+										<a className="slide__media__source" href={slide.attribution.url}>
+								{slide.attribution.copyright}
+										</a>
+									</figcaption>
+								}
+							</figure>
+						} 
+						{slide.twitter &&
+							<ExternalData  stores={this.props.stores} dispatch={this.props.dispatch}/>
+						}
           </div>
           <div className="slide__content__bullets">
-            <Bullets slideNum={this.props.slideNum} bullets={this.props.bullets} />
+            <Bullets slideNum={slide.slideNum} bullets={slide.bullets} />
           </div>
         </div>
       </div>
@@ -108,6 +115,26 @@ var SimpleBullets = React.createClass({
           </li>))}
       </ul>
     );
+  }
+});
+
+var ExternalData = React.createClass({
+	componentWillMount() {
+		this.props.dispatch('FETCH');
+  },
+  render() {
+		var externalData = this.props.stores.externalData;
+	  if (externalData.error) return <div>Error!!!</div>;
+		if(externalData.data) {
+			return (
+				<div>
+					{externalData.data.map((value, name) => {
+					   return <p key={name}><strong>{name}:</strong>{value}</p>
+					})}
+				</div>
+			);
+		}
+		return <div></div>;
   }
 });
 

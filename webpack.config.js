@@ -7,25 +7,34 @@ var sassLoaders = [
 ];
 
 module.exports = {
-    entry: './index.js',
-    output: {
-        path: __dirname,
-        filename: "bundle.js"
-    },
-    module: {
-        loaders: [
-            { 
-                test: /\.js$/,
-                loader: "babel-loader",
-                exclude: /node_modules/
-            },
-            {
-                test: /\.css$/,
-                loader: sassLoaders.join("!")
-            }
-        ]
-    },
-    resolveLoader: {
-        root: path.join(__dirname, 'node_modules')
-    }
+	entry: './index.js',
+	output: {
+		path: __dirname,
+		filename: "bundle.js"
+	},
+	module: {
+		loaders: [
+			{ 
+				test: /\.js$/,
+				loader: "babel-loader",
+				exclude: /node_modules/
+			},
+			{ 
+				test: /\.json$/,
+				loader: "json-loader"
+			},
+			{
+				test: /\.css$/,
+				loader: sassLoaders.join("!")
+			}
+		]
+  },
+	node: {
+		fs: 'empty',
+		net: 'empty',
+		tls: 'empty'
+  },
+	resolveLoader: {
+			root: path.join(__dirname, 'node_modules')
+	}
 };

@@ -1,6 +1,7 @@
 var flux = require('fluctuations');
 var merge = require('deep-extend');
-var request = require('browser-request');
+var request = require('request');
+var Immutable = require('immutable');
 
 /**
  * Hot reloading stores!
@@ -19,42 +20,31 @@ if (module.hot) {
   module.hot.dispose((data) => data.dispatcher = dispatcher);
 }
 
-dispatcher.addInterceptor('twitter', flux.createInterceptor({
-  FETCH(emit) {
-    emit("LOADING");
+dispatcher.addInterceptor('externalData', flux.createInterceptor({
+  FETCH(dispatch) {
     var options = {
-      uri: "https://api.twitter.com/1.1/search/tweets.json?q=%23reactjs&count=1",
-      json: true,
-      headers: {
-	"Authorization": 
-          "Bearer AAAAAAAAAAAAAAAAAAAAAFTvjQAAAAAA6sLOF9MK2lTyOzwu2YgJTg5UKCw%3D7GeUi5btp0pAgfEBbjirKR9guI53y19n4pvxxuLF0MeJFmZMF4"
-      }
+      url: "http://jsonplaceholder.typicode.com/posts/1",
     };
-    request(options, (err, res, body) => {
+    request.get(options, (err, res) => {
       if (err) {
-        return emit("ERROR", err);
+        return dispatch("ERROR", err);
       }
-      emit("DATA_RECEIVED");
-    });
+      dispatch("DATA_RECEIVED", JSON.parse(res.body)); });
   }
 }));
 
-var initial = () => {};
-dispatcher.addStore('twitter', flux.createStore(
+var initial = () => ({});
+dispatcher.addStore('externalData', flux.createStore(
   initial,
   {
-    DATA_RECEIVED(state, { data }) {
-      var tweet = data.statuses[0];
-      state.tweet = {
-	author: tweet.user.name,
-	text: tweet.text,
-	date: tweet.created_at
-      }; 
+    DATA_RECEIVED(state, responseBody) {
+      state.data = Immutable.Map(responseBody);
       return state;
     },
     ERROR(state, err) {
       state.error = true;
       console.log(err);
+			return state;
     }
   },
   merge
