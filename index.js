@@ -13,7 +13,7 @@ var Presentation = React.createClass({
   render() {
     return (
       <div className="presentation">
-        <Header />
+        <Header/>
         <Slide {...slides[this.state.slideNum]} />
         <Footer />
       </div>

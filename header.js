@@ -5,7 +5,6 @@ var Header = React.createClass({
     return (
       <div className="header">
         <div>
-          <img className="header__logo" src={'./resources/skybet.png'} />
           <h1 className="header__title">
             Forefront of front end: react.js
           </h1>

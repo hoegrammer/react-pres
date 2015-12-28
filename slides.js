@@ -3,10 +3,8 @@ module.exports = [{
   title: 'Hello',
   img: './resources/start.jpg',
   bullets: [
-    'Naomi Rosenberg, freelance software developer, currently working with Sky Bet',
     'This is a simple React app; I\'ll be showing you some of the code as we go along',
     'Grab the source from github - hoegrammer/react-pres',
-    'Thanks to John Robertson for making it look awesome'
   ]
 },{
   slideNum: 1,
@@ -61,29 +59,6 @@ module.exports = [{
     'Separation of concerns doesn\'t mean putting them in different files (Dave Baker)',
     'JS always linked to HTML - transparency',
     'Flux architecture separates data',
-    'We use Immutable.js to keep track of it'
-  ]
-},{
-  slideNum: 5,
-  title: 'Open Sky',
-  img: './resources/github.png',
-  bullets: [
-    'We create',
-    'We contribute',
-    'We join the discussion',
-    'hoegrammer/react-pres',
-  ]
-},{
-  slideNum: 7,
-  title: 'Q&A',
-  img: './resources/electric-works.jpg',
-  attribution: {
-    url: 'https://flic.kr/p/7eMLcf',
-    copyright: 'Paul Foot'
-  },
-  bullets: [
-    'Sky Betting and Gaming are creating 100 bleeding edge IT opportunities at the Electric Works, Sheffield',
-    'Java, React.JS, Clojure, Big Data, Devops, Test automation, LAMP, Architecture, Analysis, Agile',
-    'Join the innovation: Grow with us'
+    'Can use Immutable.js, helps you keep track of it'
   ]
 }];

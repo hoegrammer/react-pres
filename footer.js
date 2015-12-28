@@ -5,7 +5,7 @@ var Footer = React.createClass({
     return (
       <div className="footer">
         <span className="footer__date">
-          12 October 2015
+          {new Date().toDateString()} 
         </span>
       </div>
     );
