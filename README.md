@@ -2,7 +2,9 @@
 A very very simple presentation engine written in React, complete with React-related content. Uses  a babel transform to do fine-grained hot-reloading.
 
 # to install
-`npm install`
+```
+npm install
+```
 `sudo npm install -g webpack-dev-server`
 
 # to run
