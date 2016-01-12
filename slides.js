@@ -43,6 +43,7 @@ module.exports = [{
   bullets: [
     'Example of hot-reloading',
     'The infrastructure - node.js, webpack, ES6 (babel)',
+		'Dev tools / displayname plugin (must be first) / source-map',
     'Example of composability',
     'Example of transparency/simplicity',
   ]
