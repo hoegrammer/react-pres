@@ -43,7 +43,7 @@ var Slide = React.createClass({
         </h1>
         <div className="slide__content">
           <div className="slide__content__media">
-						{!slide.twitter && 
+						{!slide.externalData && 
 							<figure className="media">
 								<img src={slide.img} className="media__image" />
 								{slide.attribution &&
@@ -55,7 +55,7 @@ var Slide = React.createClass({
 								}
 							</figure>
 						} 
-						{slide.twitter &&
+						{slide.externalData &&
 							<ExternalData  stores={this.props.stores} dispatch={this.props.dispatch}/>
 						}
           </div>
@@ -128,7 +128,7 @@ var ExternalData = React.createClass({
 		if(externalData.data) {
 			return (
 				<div>
-					{externalData.data.map((value, name) => {
+					{externalData.data.valueSeq().map((value, name) => {
 					   return <p key={name}><strong>{name}:</strong>{value}</p>
 					})}
 				</div>

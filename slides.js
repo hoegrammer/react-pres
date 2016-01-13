@@ -48,25 +48,40 @@ module.exports = [{
     'Example of transparency/simplicity',
   ]
 },{
-  slideNum: 6,
-  title: 'What\s all that HTML, what about Separation of Concerns?',
-  img: './resources/chaos.jpg',
-  attribution: {
-    url: 'http://amethyst-fang.deviantart.com/art/Amethyst-Fang-s-Cutie-Mark-278732272',
-    copyright: 'Amethyst Fang'
-  },
-  bullets: [
-    'Going back on yourself is fine if you went the wrong way to start with',
-    'Separation of concerns doesn\'t mean putting them in different files',
-    'JS always linked to HTML - transparency',
-    'Flux architecture separates data',
-    'Can use Immutable.js, helps you keep track of it'
-  ]
-},{
-  slideNum: 7,
-  twitter: true,
-  title: 'Data fetching example',
-  bullets: [
-    'Uses an interceptor to fire async request and then write to store in callback'
+		slideNum: 5,
+		title: 'What\s all that HTML, what about Separation of Concerns?',
+		img: './resources/chaos.jpg',
+		attribution: {
+			url: 'http://amethyst-fang.deviantart.com/art/Amethyst-Fang-s-Cutie-Mark-278732272',
+			copyright: 'Amethyst Fang'
+		},
+		bullets: [
+			'Going back on yourself is fine if you went the wrong way to start with',
+			'Separation of concerns doesn\'t mean putting them in different files',
+			'JS always linked to HTML - transparency',
+			'Flux architecture separates data',
+			'Can use Immutable.js, helps you keep track of it'
+		]
+	},{
+		slideNum: 6,
+		title: 'Learning from Functional Programming',
+		img: './resources/erlang.jpeg',
+		attribution: {
+			url: 'http://version2beta.com/static/slides/idiomatic_erlang/idiomatic_erlang.003.jpeg',
+			copyright: 'Rob Martin'
+		},
+		bullets: [
+			'Using Immutable.js for data stores',
+			'User input handled by browser; event handlers can be pure functions',
+			'Data access encapsulated in interceptors',
+			'map, reduce, filter ... ',
+			'Bodil Stokke: What Every Hipster Should Know About Functional Programming'
+		]
+	},{
+		slideNum: 7,
+		externalData: true,
+		title: 'Data fetching example',
+		bullets: [
+			'Uses an interceptor to fire async request and then write to store in callback'
   ]
 }];
