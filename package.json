@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha --compilers js:babel/register"
+    "test": "NODE_ENV=test mocha"
   },
   "repository": "https://github.com/hoegrammer/react-pres",
   "author": "Naomi Rosenberg <naomi.rosenberg@skybettingandgaming.com>",
