@@ -36,7 +36,6 @@ var Application = React.createClass({
 var Slide = React.createClass({
   render() {
 		var slide = this.props.slide;
-		console.log(this.props.stores);
     return (
       <div className="slide">
         <h1 className="slide__title">
