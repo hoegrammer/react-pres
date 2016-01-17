@@ -38,14 +38,14 @@ module.exports = [{
   ]
 },{
   slideNum: 4,
-  title: 'Talk is cheap, show me the code',
+  title: 'Tooling',
   img: './resources/code.jpg',
   bullets: [
-    'Example of hot-reloading',
-    'The infrastructure - node.js, webpack, ES6 (babel)',
-		'Dev tools / displayname plugin (must be first) / source-map',
-    'Example of composability',
-    'Example of transparency/simplicity',
+    'Hot-reloading',
+    'Node',
+		'Webpack',
+		'React dev tool support',
+		'ES6/Babel'
   ]
 },{
 		slideNum: 5,
@@ -60,7 +60,6 @@ module.exports = [{
 			'Separation of concerns doesn\'t mean putting them in different files',
 			'JS always linked to HTML - transparency',
 			'Flux architecture separates data',
-			'Can use Immutable.js, helps you keep track of it'
 		]
 	},{
 		slideNum: 6,
@@ -74,11 +73,32 @@ module.exports = [{
 			'Using Immutable.js for data stores',
 			'User input handled by browser; event handlers can be pure functions',
 			'Data access encapsulated in interceptors',
-			'map, reduce, filter ... ',
+			'Map example',
+			'0.14 - Functional Components',
 			'Bodil Stokke: What Every Hipster Should Know About Functional Programming'
 		]
 	},{
 		slideNum: 7,
+		title: 'Flux implementations',
+		img: './resources/flux.png',
+		bullets: [
+		  'Flux is not a library but an architectural pattern',
+			'Naive implementations use mutable stores',
+			'Fluctuations.js - has interceptors, actions are pure',
+			'Redux - mature - useful conventions baked in'
+		]
+	},{
+		slideNum: 8,
+		title: 'Unit testing',
+		img: './resources/tdd.png',
+		bullets: [
+			'Mocha',
+			'Chai',
+			'Skin-deep',
+			'Babel'
+		]
+  },{
+		slideNum: 9,
 		externalData: true,
 		title: 'Data fetching example',
 		bullets: [
