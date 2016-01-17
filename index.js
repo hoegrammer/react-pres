@@ -2,7 +2,7 @@
 
 var React = require('react');
 
-var Application = require('./Application');
+var {Application} = require('./components');
 
 var dispatcher = require('./dispatcher');
 

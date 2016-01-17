@@ -138,4 +138,4 @@ var ExternalData = React.createClass({
   }
 });
 
-module.exports = Application;
+module.exports = {Application, Slide, Bullets, ExternalData};

@@ -12,6 +12,9 @@
           }]
         }
       }
+    },
+    "test": {
+      "plugins": ["react-display-name"]
     }
   }
 }

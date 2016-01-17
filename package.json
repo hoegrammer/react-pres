@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test mocha --compilers js:babel/register"
   },
   "repository": "https://github.com/hoegrammer/react-pres",
   "author": "Naomi Rosenberg <naomi.rosenberg@skybettingandgaming.com>",
@@ -24,6 +24,7 @@
     "deep-extend": "^0.4.0",
     "fluctuations": "^0.8.0",
     "immutable": "^3.7.6",
+    "json-loader": "^0.5.4",
     "react": "^0.13.3",
     "react-transform-hmr": "^1.0.1",
     "request": "2.65.0",
@@ -32,7 +33,10 @@
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
+    "chai": "^3.4.1",
     "css-loader": "^0.19.0",
+    "mocha": "^2.3.4",
+    "skin-deep": "^0.13.2",
     "style-loader": "^0.12.4"
   }
 }
